@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <style>
+      body {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      #top {
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        height: 45px;
+        display: flex;
+        gap: 0 970px;
+        align-items: center;
+
+        background-color: #000000;
+      }
+      #top1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .button {
+        height: 45px;
+        width: 97px;
+        background-color: black;
+        color: #fff;
+        font-size: 15px;
+      }
+
+      .button:hover {
+        background-color: #cccccc;
+        color: black;
+      }
+      #top2 {
+        color: white;
+      }
+
+      .dropbtn {
+        background-color: black;
+        color: white;
+        padding: 12px;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        gap: 0 5px;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        height: 45px;
+        width: 120px;
+        background-color: black;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+        font-size: 15px;
+      }
+
+      .dropdown-content a:hover {
+        background-color: white;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #cccccc;
+      }
+      #banner {
+        height: 800px;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background-color: aqua;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 800px;
+        object-fit: cover;
+      }
+      #img {
+        position: relative;
+        color: #fff;
+        font-size: 1.5rem;
+      }
+      #img1 {
+        width: 100%;
+      }
+      #textimg1 {
+        font-size: 16px;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #mid {
+        padding: 80px 330px;
+        height: 600px;
+        text-align: center;
+      }
+      .mid1 {
+        letter-spacing: 4px;
+        line-height: 1.5cm;
+      }
+      h2 {
+        font-size: 33px;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 400;
+        margin: 10px 0;
+      }
+      .mid2 {
+        font-size: 20px;
+        display: block;
+
+        color: #7e7777;
+      }
+      .mid3 {
+        font-family: "Segoe UI", Arial, sans-serif;
+        text-align: justify;
+        font-size: 15.9px;
+        line-height: 0.65cm;
+        font-weight: 400;
+      }
+      .mid4 {
+        display: flex;
+        justify-content: center;
+        padding-top: 40px;
+        line-height: 1cm;
+        font-size: 18px;
+      }
+      #band {
+        padding: 0 55px;
+      }
+      #band1 img {
+        width: 171px;
+        height: 175px;
+      }
+      #midtobe {
+        justify-content: center;
+        background-color: #000000;
+        color: white;
+        height: 850px;
+        padding-top: 80px;
+      }
+
+      .midtobe1 {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+      }
+      .midtobe2 {
+        justify-content: center;
+        text-align: center;
+        font-size: 20px;
+        display: block;
+        color: #7e7777;
+      }
+      #midtobe3 {
+        width: 875px;
+        height: 135px;
+        background-color: white;
+        color: #7e7777;
+
+        padding: 0 20px;
+        margin-left: 290px;
+      }
+      .tobe1 {
+        display: flex;
+        border-bottom: 1px solid #7e7777;
+        padding: 10px 0;
+      }
+      #tobe2 {
+        margin-left: 20px;
+        color: white;
+        background-color: red;
+        width: 80px;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 3px;
+      }
+      #tobee {
+        padding-top: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      #tobe3 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 25px;
+        height: 25px;
+        background-color: #000000;
+        color: white;
+        align-content: center;
+        border-radius: 50%;
+      }
+      #tickets {
+        padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #tickets1 {
+        width: 290px;
+        height: 430px;
+        background-color: white;
+        color: #000000;
+        border: 1px solid black;
+        margin: 0 10px;
+      }
+      #ticketsimg img {
+        width: 290px;
+        height: 185px;
+      }
+      #ticketstext {
+        padding: 0 15px;
+      }
+      #ticketstext4{
+        z-index: 20000;
+      }
+      .button1 {
+        width: 100px;
+        height: 40px;
+        background-color: black;
+        color: #fff;
+      }
+      .button1:hover {
+        background-color: #cccccc;
+        color: black;
+      }
+      #modal2 {
+        top: 100px;
+        bottom: 70px;
+        left: 200px;
+        right: 220px;
+        position: fixed;
+        color: black;
+        background-color: white;
+        animation: modalShow 0.5s;
+        display: none;
+        z-index: 10000;
+      }
+
+      @keyframes modalShow {
+        0% {
+          transform: translateY(-100%);
+        }
+        100% {
+          transform: translateY(0%);
+        }
+      }
+
+      #closemodal2 {
+        position: absolute;
+        right: 30px;
+        top: 20px;
+        font-size: 40px;
+        cursor: pointer;
+      }
+
+      #modal2.show2 {
+        display: block;
+      }
+      #name2 {
+        font-size: 20px;
+
+        gap: 0 40px;
+        height: 100%;
+        text-align: left;
+      }
+
+      #bannetick {
+        height: 150px;
+        background-color: #00988b;
+        color: white;
+        font-size: 35px;
+        position: relative;
+      }
+      #banneticks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0 20px;
+        font-size: 40px;
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+      }
+      .button2 {
+        border: #00988b;
+        width: 60px;
+        height: 60px;
+        background-color: #00988b;
+        color: white;
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .button2:hover {
+        background-color: #cccccc;
+        color: white;
+      }
+      #table {
+        padding: 20px 20px;
+        line-height: 2.5cm;
+        font-size: 17px;
+      }
+      .many {
+        line-height: 1.25cm;
+      }
+      .many1 {
+        display: flex;
+        text-align: center;
+        gap: 0 10px;
+        padding-right: 20px;
+      }
+      .many2 {
+        font-size: 19px;
+      }
+      .botton4 {
+        width: 1045px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        background-color: #00988b;
+        color: white;
+        display: flex;
+        gap: 0 5px;
+        font-size: 18px;
+        border: 2px solid black;
+      }
+      .botton4:hover {
+        background-color: #cccccc;
+        color: white;
+      }
+      #close {
+        display: flex;
+        justify-content: space-between;
+      }
+      #close1 {
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 40px;
+        margin-top: 30px;
+        align-items: center;
+        gap: 0 5px;
+        background-color: orangered;
+        color: white;
+        font-size: 18px;
+      }
+      #close1:hover {
+        background-color: #cccccc;
+        color: black;
+      }
+      #help {
+        display: flex;
+        justify-content: center;
+        gap: 0 3px;
+        font-size: 20px;
+        padding-right: 30px;
+      }
+      #help1 {
+        color: aqua;
+        text-decoration: underline;
+      }
+      #contact {
+        height: 500px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-top: 80px;
+      }
+      .contact1 {
+        font-family: "Segoe UI", Arial, sans-serif;
+        letter-spacing: 4px;
+        line-height: 1.5cm;
+      }
+      #cont {
+        display: flex;
+        padding-top: 60px;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 1cm;
+      }
+      #cont1 {
+        width: 49.9%;
+      }
+      .cont11 {
+        display: flex;
+        gap: 0 15px;
+        padding-left: 350px;
+      }
+      #cont2 {
+        width: 49.9%;
+      }
+      #cont21 {
+        gap: 0 30px;
+        display: flex;
+        padding-bottom: 15px;
+        padding-top: 10px;
+      }
+      #cont22 {
+        display: flex;
+      }
+      #send {
+        position: absolute;
+        padding-top: 15px;
+        right: 240px;
+      }
+      .sentt {
+        background-color: black;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      .sentt:hover {
+        background-color: #cccccc;
+        color: black;
+      }
+      #bot {
+        height: 200px;
+
+        padding-top: 80px;
+        color: #a0a0a0;
+      }
+      #bot1 {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        gap: 0 10px;
+        font-size: 30px;
+      }
+      #bot2 {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        font-size: 23px;
+        gap: 0 6px;
+      }
+      #bot22 {
+        text-decoration: underline;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <script>
+      function scrollToE(id) {
+        document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+      }
+    </script>
+    <div id="top">
+      <div id="top1">
+        <button class="button" onclick="scrollToE('top')">HOME</button>
+        <button class="button" onclick="scrollToE('mid')">BAND</button>
+        <button class="button" onclick="scrollToE('midtobe')">TOUR</button>
+        <button class="button" onclick="scrollToE('contact')">CONTACT</button>
+        <button class="dropdown">
+          <div class="dropbtn">
+            <div>MORE</div>
+            <div><i class="fa-solid fa-caret-down"></i></div>
+          </div>
+          <div class="dropdown-content">
+            <a href="#">Merchandise</a>
+            <a href="#">Extras</a>
+            <a href="#">Media</a>
+          </div>
+        </button>
+      </div>
+      <div id="top2"><i class="fas fa-search"></i></div>
+    </div>
+    <div id="banner">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div id="img">
+              <div id="img1">
+                <img src="images/la.jpg" />
+              </div>
+              <div id="textimg1">
+                <h1>Los Angeles</h1>
+                <p>
+                  <b>We had the best time playing at Venice Beach!</b>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div id="img">
+              <div id="img1">
+                <img src="images/ny.jpg" />
+              </div>
+              <div id="textimg1">
+                <h1>New York</h1>
+                <p>
+                  <b>The atmosphere in New York is lorem ipsum.</b>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div id="img">
+              <div id="img1">
+                <img src="images/chicago.jpg" />
+              </div>
+              <div id="textimg1">
+                <h1>Chicago</h1>
+                <p>
+                  <b>Thank you, Chicago - A night we won't forget.</b>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
+    <div id="mid">
+      <h2 class="mid1">THE BAND</h2>
+      <p class="mid2"><i>We love music</i></p>
+      <p class="mid3">
+        We have created a fictional band website. Lorem ipsum dolor sit amet,
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </p>
+      <div class="mid4">
+        <div id="band">
+          <div>Name</div>
+          <div id="band1"><img src="images/bandmember.jpg" /></div>
+        </div>
+        <div id="band">
+          <div>Name</div>
+          <div id="band1"><img src="images/bandmember.jpg" /></div>
+        </div>
+        <div id="band">
+          <div>Name</div>
+          <div id="band1"><img src="images/bandmember.jpg" /></div>
+        </div>
+      </div>
+    </div>
+    <div id="midtobe">
+      <h2 class="midtobe1">TOUR DATE</h2>
+      <p class="midtobe2"><i>Remember to book your tickets!</i></p>
+      <div id="midtobe3">
+        <div class="tobe1">
+          <div>September</div>
+          <div id="tobe2">Sold out</div>
+        </div>
+        <div class="tobe1">
+          <div>October</div>
+          <div id="tobe2">Sold out</div>
+        </div>
+        <div id="tobee">
+          <div>November3</div>
+          <div id="tobe3">3</div>
+        </div>
+      </div>
+      <div id="tickets">
+        <div id="tickets1">
+          <div id="ticketsimg"><img src="images/newyork.jpg" /></div>
+          <div id="ticketstext">
+            <h2 class="ticketstext1">New York</h2>
+            <p class="ticketstext2"><i>Fri 27 Nov 2016</i></p>
+            <p class="ticketstext3">
+              Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+            </p>
+
+            <div id="ticketstext4">
+              <button class="button1" onclick="toggleModal2()">
+                Buy Tickets
+              </button>
+              <div id="modal2">
+                <div id="name2">
+                  <div id="bannetick">
+                    <button
+                      class="button2"
+                      onclick="toggleModal2()"
+                      id="closemodal"
+                    >
+                      &#10006;
+                    </button>
+                    <div id="banneticks">
+                      <div><i class="fas fa-suitcase"></i></div>
+                      <div>Tickets</div>
+                    </div>
+                  </div>
+
+                  <div id="table">
+                    <div class="many">
+                      <div class="many1">
+                        <div><i class="fas fa-shopping-cart"></i></div>
+                        <div>Tickets, $15 per person</div>
+                      </div>
+                      <div class="many2">
+                        <input
+                          id="fullnamea"
+                          type="text"
+                          placeholder="How many?"
+                          style="height: 40px; width: 100%; font-size: 18px"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="many">
+                      <div class="many1">
+                        <div><i class="fas fa-user"></i></div>
+                        <div>Send To</div>
+                      </div>
+                      <div class="emailadd2">
+                        <input
+                          id="emailadda"
+                          type="text"
+                          placeholder="Enter Email"
+                          style="height: 40px; width: 100%; font-size: 18px"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <button class="botton4" onclick="sendtn()">
+                        <div>PAY</div>
+                        <div><i class="fas fa-check"></i></div>
+                      </button>
+                    </div>
+                    <div id="close">
+                      <button id="close1">
+                        <div>Close</div>
+                        <div>&#10006;</div>
+                      </button>
+                      <div id="help">
+                        <div>Need</div>
+                        <div id="help1">help?</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                function toggleModal2() {
+                  const modal2 = document.querySelector("#modal2");
+                  modal2.classList.toggle("show2");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div id="tickets1">
+          <div id="ticketsimg"><img src="images/paris.jpg" /></div>
+          <div id="ticketstext">
+            <h2 class="ticketstext1">Paris</h2>
+            <p class="ticketstext2"><i>Sat 28 Nov 2016</i></p>
+            <p class="ticketstext3">
+              Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+            </p>
+
+            <div id="ticketstext4">
+              <button class="button1" onclick="toggleModal2()">
+                Buy Tickets
+              </button>
+              <div id="modal2">
+                <div id="name2">
+                  <div id="bannetick">
+                    <button
+                      class="button2"
+                      onclick="toggleModal2()"
+                      id="closemodal"
+                    >
+                      &#10006;
+                    </button>
+                    <div id="banneticks">
+                      <div><i class="fal fa-suitcase"></i></div>
+                      <div>Tickets</div>
+                    </div>
+                  </div>
+
+                  <div id="table">
+                    <div class="many">
+                      <div class="many1">
+                        <div><i class="fas fa-shopping-cart"></i></div>
+                        <div>Tickets, $15 per person</div>
+                      </div>
+                      <div class="many2">
+                        <input
+                          id="fullnamea"
+                          type="text"
+                          placeholder="How many?"
+                          style="height: 40px; width: 100%; font-size: 18px"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="many">
+                      <div class="many1">
+                        <div><i class="fas fa-user"></i></div>
+                        <div>Send To</div>
+                      </div>
+                      <div class="emailadd2">
+                        <input
+                          id="emailadda"
+                          type="text"
+                          placeholder="Enter Email"
+                          style="height: 40px; width: 100%"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <button class="botton4" onclick="sendtn()">
+                        <div>PAY</div>
+                        <div><i class="fas fa-check"></i></div>
+                      </button>
+                    </div>
+                    <div id="close">
+                      <button id="close1">
+                        <div>Close</div>
+                        <div>&#10006;</div>
+                      </button>
+                      <div id="help">
+                        <div>Need</div>
+                        <div id="help1">help?</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                function toggleModal2() {
+                  const modal2 = document.querySelector("#modal2");
+                  modal2.classList.toggle("show2");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+        <div id="tickets1">
+          <div id="ticketsimg"><img src="images/sanfran.jpg" /></div>
+          <div id="ticketstext">
+            <h2 class="ticketstext1">San Francisco</h2>
+            <p class="ticketstext2"><i>Sat 28 Nov 2016</i></p>
+            <p class="ticketstext3">
+              Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+            </p>
+
+            <div id="ticketstext4">
+              <button class="button1" onclick="toggleModal2()">
+                Buy Tickets
+              </button>
+              <div id="modal2">
+                <div id="name2">
+                  <div id="bannetick">
+                    <button
+                      class="button2"
+                      onclick="toggleModal2()"
+                      id="closemodal"
+                    >
+                      &#10006;
+                    </button>
+                    <div id="banneticks">
+                      <div><i class="fal fa-suitcase"></i></div>
+                      <div>Tickets</div>
+                    </div>
+                  </div>
+
+                  <div id="table">
+                    <div class="many">
+                      <div class="many1">
+                        <div><i class="fas fa-shopping-cart"></i></div>
+                        <div>Tickets, $15 per person</div>
+                      </div>
+                      <div class="many2">
+                        <input
+                          id="fullnamea"
+                          type="text"
+                          placeholder="How many?"
+                          style="height: 40px; width: 100%"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="many">
+                      <div class="many1">
+                        <div><i class="fas fa-user"></i></div>
+                        <div>Send To</div>
+                      </div>
+                      <div class="emailadd2">
+                        <input
+                          id="emailadda"
+                          type="text"
+                          placeholder="Enter Email"
+                          style="height: 40px; width: 100%"
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <button class="botton4" onclick="sendtn()">
+                        <div>PAY</div>
+                        <div><i class="fas fa-check"></i></div>
+                      </button>
+                    </div>
+                    <div id="close">
+                      <button id="close1">
+                        <div>Close</div>
+                        <div>&#10006;</div>
+                      </button>
+                      <div id="help">
+                        <div>Need</div>
+                        <div id="help1">help?</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <script>
+                function toggleModal2() {
+                  const modal2 = document.querySelector("#modal2");
+                  modal2.classList.toggle("show2");
+                }
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <h2 class="contact1">CONTACT</h2>
+      <p class="contact2"><i>Fan? Drop a note!</i></p>
+      <div id="cont">
+        <div id="cont1">
+          <div class="cont11">
+            <div><i class="fas fa-map-marker-alt"></i></div>
+            <div>Chicago, US</div>
+          </div>
+          <div class="cont11">
+            <div><i class="fas fa-phone-alt"></i></div>
+            <div>Phone: +00 151515</div>
+          </div>
+          <div class="cont11">
+            <div><i class="fas fa-envelope"></i></div>
+            <div>Email: mail@mail.com</div>
+          </div>
+        </div>
+        <div id="cont2">
+          <div id="cont21">
+            <div class="cont211">
+              <input
+                id="namecont"
+                type="text"
+                placeholder="Name"
+                style="height: 35px; width: 231px"
+              />
+            </div>
+            <div class="cont211">
+              <input
+                id="emailcont"
+                type="text"
+                placeholder=" Email"
+                style="height: 35px; width: 231px"
+              />
+            </div>
+          </div>
+          <div id="cont22">
+            <input
+              id="messagecont"
+              type="text"
+              placeholder="Message"
+              style="height: 35px; width: 500px"
+            />
+          </div>
+        </div>
+      </div>
+      <div id="send">
+        <button
+        href="#"
+          class="sentt"
+          style="width: 100px; height: 50px"
+          onclick="sendd()"
+        >
+          SEND
+        </button>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        emailjs.init("yvkU84zovH69OTLg1");
+      })();
+
+      function sendd() {
+        const name = document.querySelector("#namecont");
+        const email = document.querySelector("#emailcont");
+        const message = document.querySelector("#messagecont");
+
+        if (name.value === "") {
+          name.focus();
+          name.placeholder = "Tôi nên gọi bạn bằng...";
+          return;
+        }
+       
+        if (email.value === "" || !email.value.includes("@")) {
+          email.focus();
+          email.placeholder = "Tôi sẽ trả lời bạn qua email...";
+          return;
+        }
+        if (message.value === "") {
+          message.focus();
+          message.placeholder = "Đừng bỏ đi mà không nói lời nào 😥";
+          return;
+        }
+        var params = {
+          name: name.value || "nothing",
+          email: email.value || "nothing",
+          message: message.value || "nothing",
+        };
+
+        const serviceID = "service_jbaq5lq";
+        const templateID = "template_k653gmx";
+
+        emailjs
+          .send(serviceID, templateID, params)
+          .then((res) => {
+            console.log(res);
+            name.value = "";
+            email.value = "";  
+            message.value = "";
+          })
+          .catch((err) => console.log(err));
+      }
+    </script>
+    <div><img src="images/map.jpg" /></div>
+    <div id="bot">
+      <div id="bot1">
+        <div class="bot11"><i class="fab fa-facebook-square"></i></div>
+        <div class="bot11"><i class="fab fa-instagram"></i></div>
+        <div class="bot11"><i class="fab fa-snapchat-ghost"></i></div>
+        <div class="bot11"><i class="fab fa-pinterest-p"></i></div>
+        <div class="bot11"><i class="fab fa-twitter"></i></div>
+        <div class="bot11"><i class="fab fa-linkedin-in"></i></div>
+      </div>
+      <div id="bot2">
+        <div>Powered by</div>
+        <a  href="https://www.w3schools.com/w3css/default.asp" id="bot22" target="_blank">
+          w3.css
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
